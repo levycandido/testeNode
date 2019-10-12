@@ -1,9 +1,7 @@
-http = require ('http');
-
-function retorna(req, res) {
-    res.writeHead(200, {'Content-Type':'text/plain'});
-    res.write('teste node AWS');
-    res.end();
-}
-
-http.createServer(retorna).listen('127.0.0.1');
+var http = require('http');
+var port = 8080;
+http.createServer(function(req,res){ 
+  res.writeHead(200,{'Content-Type':'test/plain'});
+  res.end('Hello world!\n');
+}).listen(port);
+console.log('Listening on port',port);
