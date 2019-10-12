@@ -6,4 +6,4 @@ function retorna(req, res) {
     res.end();
 }
 
-http.createServer(retorna).listen(5000);
+http.createServer(retorna).listen('127.0.0.1');
